@@ -11,12 +11,8 @@ helpers do
     end
   end
 
-  def tweets_stale?
-    if Time.now - TwitterUser.find_by_username(@username.username).tweets.first.updated_at >= 15
-      return true
-    else
-      "banana"
-    end
+  def tweets_stale?(var)
+    Time.now - var.updated_at > 1
   end
 
 end

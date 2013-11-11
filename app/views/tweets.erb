@@ -1,0 +1,18 @@
+<div class="container">
+
+  <h3>Welcome <%= @username.username %></h3>
+  <p> Here are your tweets</p>
+
+  <% @tweets.each do |text| %>
+   <p> <%= text.text %></p>
+  <% end %>
+
+</div>
+
+
+
+
+
+<!--  <%# Twitter.search("from:#{@username}", :count=>10).results.map do |tweet| %>
+  <p><%#= tweet.text%></p>
+ <%# end %> -->
